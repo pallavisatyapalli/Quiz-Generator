@@ -1,13 +1,13 @@
-/* Layout */
+/* 
 body, html {
   margin: 0;
   padding: 0;
   font-family:  Arial, sans-serif;
-  background: #0f172a; 
+  background: #ffffff; 
   color: #e0f2f1; 
 }
 
-/* Container */
+
 .container {
   max-width: 800px;
   margin: 40px auto;
@@ -17,7 +17,7 @@ body, html {
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-/* Tabs */
+
 .tab-buttons {
   display: flex;
   margin-bottom: 10px;
@@ -42,7 +42,7 @@ body, html {
   color: #ffffff;
 }
 
-/* Tab content */
+
 .tab-content {
   display: none;
 }
@@ -52,7 +52,7 @@ body, html {
   margin-bottom: 15px;
 }
 
-/* Inputs */
+
 textarea, input[type="file"] {
   width: 100%;
   padding: 10px;
@@ -63,7 +63,7 @@ textarea, input[type="file"] {
   margin-top: 10px;
 }
 
-/* Input group */
+
 .input-group {
   display: inline-block;
   margin-right: 15px;
@@ -74,7 +74,7 @@ textarea, input[type="file"] {
   color: #bae6fd;
 }
 
-/* Buttons */
+
 .generate-btn {
   margin-top: 10px;
   padding: 10px 20px;
@@ -92,7 +92,7 @@ textarea, input[type="file"] {
   background: #98a6ac;
 }
 
-/* Loader */
+
 .loader {
   border: 3px solid #f3f3f3;
   border-top: 3px solid #06b6d4;
@@ -110,7 +110,7 @@ textarea, input[type="file"] {
   100% { transform: rotate(360deg); }
 }
 
-/* PDF Section */
+
 #pdf-tab {
   margin-top: 20px;
   padding: 15px;
@@ -119,7 +119,7 @@ textarea, input[type="file"] {
   border-radius: 8px;
 }
 
-/* Quiz */
+
 .hidden { display: none; }
 
 .question {
@@ -147,7 +147,7 @@ textarea, input[type="file"] {
   color: #fff;
 }
 
-/* Fill in the blank input */
+
 .fib-input {
   display: flex;
   align-items: center;
@@ -172,7 +172,7 @@ textarea, input[type="file"] {
   cursor: pointer;
 }
 
-/* Result Boxes */
+
 .score-box {
   margin-top: 20px;
   padding: 15px;
@@ -195,7 +195,7 @@ textarea, input[type="file"] {
 }
 
 
-/* Results */
+
 #results-container {
   margin-top: 30px;
   padding: 20px;
@@ -223,5 +223,236 @@ textarea, input[type="file"] {
 
 .result-item .incorrect {
   color: #f87171;
+  font-weight: bold;
+}
+*/
+
+/* Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;  /* very light gray */
+  color: #111827;       /* dark text */
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  cursor: pointer;
+  background: #e2e8f0;  /* light gray */
+  border: none;
+  outline: none;
+  color: #1e293b;
+  font-weight: 600;
+  transition: background 0.3s;
+  border-radius: 6px 6px 0 0;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #0ea5e9; 
+  color: #ffffff;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+textarea, input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #111827;
+  margin-top: 10px;
+}
+
+/* Input group */
+.input-group {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.input-group label {
+  margin-right: 5px;
+  color: #374151;
+}
+
+/* Buttons */
+.generate-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #0ea5e9; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.generate-btn:hover {
+  background: #0284c7;
+}
+
+/* Loader */
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #0ea5e9;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* PDF Section */
+#pdf-tab {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+/* Quiz */
+.hidden { display: none; }
+
+.question {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #111827;
+  border: 1px solid #cbd5e1;
+  transition: background 0.3s;
+}
+
+.option:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+/* Fill in the blank input */
+.fib-input {
+  display: flex;
+  align-items: center;
+}
+
+.fib-input input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.fib-input button {
+  padding: 8px 16px;
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Result Boxes */
+.score-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #14b8a6;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.error-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ef4444;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 20px;
+  color: #111827;
+}
+
+/* Results */
+#results-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.result-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-left: 5px solid #0ea5e9;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.result-item:hover {
+  background-color: #f1f5f9;
+}
+
+.result-item .correct {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.result-item .incorrect {
+  color: #dc2626;
   font-weight: bold;
 }
